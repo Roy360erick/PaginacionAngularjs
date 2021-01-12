@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/script.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="appCtrl" >
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <th>{{item}}</th>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination-panel">
+        <button ng-click="previus()" type="button">Anterior</button>
+        <small class="indicator">{{currentPage}}/{{numPages()}}</small>
+        <button ng-click="next()" type="button">Siguiente</button>
+    </div>
+</body>
+</html>
